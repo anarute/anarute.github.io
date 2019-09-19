@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+    - develop
 
 jobs:
   build:
@@ -9,7 +12,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run a multi-line script
+    - name: Install dependencies and deploy to master
       run: |
         echo yarn install
-        echo gridsome build
+        echo npm run deploy
