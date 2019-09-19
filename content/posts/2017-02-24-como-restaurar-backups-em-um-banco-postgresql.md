@@ -1,9 +1,9 @@
 ---
 title: "Como restaurar backups em um banco PostgreSQL"
 description: "Guia básico para criar e restaurar um dump de um banco em PostgreSQL"
-date: 2019-02-24 14:30:43
+date: 2017-02-24 14:30:43
 author: anarute
-tags: ['sysadmin', 'postgresql', 'databases', 'db']
+tags: ["sysadmin", "postgresql", "databases", "db"]
 ---
 
 De tempos em tempos eu preciso restaurar um backup de algum banco para outro ou
@@ -23,8 +23,8 @@ No comando acima, extraímos todos os dados do banco (troque _dbname_ pelo nome 
 
 Para restaurar o backup num banco, o postegres também nos permite fazer isso de um jeito bem simples, mas tem alguns detalhes:
 
-1) o banco precisa existir com o mesmo nome do banco que foi extraído.  
-2) o banco não pode ter as tabelas criadas, senão vai dar conflito e a restauração não vai dar certo.
+1. o banco precisa existir com o mesmo nome do banco que foi extraído.
+2. o banco não pode ter as tabelas criadas, senão vai dar conflito e a restauração não vai dar certo.
 
 Nesse caso, se o banco já existir primeiro eu dou `dropdb db_name` que vai deletar o banco (**IMPORTANTE**, eu só faço isso em bancos locais, porque isso apaga **todos os dados** do banco, então **NUNCA** faça isso em produção a menos que você saiba exatamente o que está fazendo. Dá justa causa, hein? Deus tá vendo). Depois de deletar, precisamos recriá-la senão a restauração não vai funcionar por não encontrar o banco. Para recriá-lo: `createdb db_name`
 

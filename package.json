@@ -5,7 +5,9 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "newpost": "node scripts/newPost.js"
+    "newpost": "node scripts/newPost.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d dist"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
@@ -13,6 +15,7 @@
     "@gridsome/plugin-sitemap": "^0.2.1",
     "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.3.2",
+    "gh-pages": "^2.1.1",
     "gridsome": "^0.6.7",
     "gridsome-plugin-remark-shiki": "^0.3.0",
     "gridsome-plugin-rss": "^1.1.1",
