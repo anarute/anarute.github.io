@@ -35,7 +35,6 @@
           </div>
         </footer>
       </article>
-
       <site-footer class="pb-8 sm:pb-10" />
     </main>
   </Layout>
@@ -75,8 +74,8 @@ export default {
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: this.$page.post.title },
         { name: "twitter:description", content: this.description(this.$page.post) },
-        { name: "twitter:site", content: "@cossssmin" },
-        { name: "twitter:creator", content: "@cossssmin" },
+        { name: "twitter:site", content: "@ana_rute" },
+        { name: "twitter:creator", content: "@ana_rute" },
         { name: "twitter:image", content: this.ogImageUrl },
       ],
     }

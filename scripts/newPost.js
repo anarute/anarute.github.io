@@ -18,7 +18,7 @@ title: "${title}"
 slug:
 description: ""
 date: ${postDate}
-author: bleda-gridsome
+author: anarute
 tags:
 cover:
 fullscreen: false

@@ -52,8 +52,8 @@ export default {
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: `Posts tagged "${this.titleCase(this.$page.tag.title)}"` },
         { name: "twitter:description", content: `Browse posts tagged "${this.titleCase(this.$page.tag.title)}"` },
-        { name: "twitter:site", content: "@cossssmin" },
-        { name: "twitter:creator", content: "@cossssmin" },
+        { name: "twitter:site", content: "@ana_rute" },
+        { name: "twitter:creator", content: "@ana_rute" },
         { name: "twitter:image", content: this.ogImageUrl },
       ],
     }
