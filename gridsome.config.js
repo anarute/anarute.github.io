@@ -5,118 +5,116 @@ class TailwindExtractor {
 }
 
 module.exports = {
-  siteName: 'Ana Rute\'s personal blog',
+  siteName: "Ana Rute's personal blog",
   siteDescription: "Randoms thoughts about life and code.",
-  siteUrl: 'https://anarute.github.io',
+  siteUrl: "https://anarute.com",
   titleTemplate: `%s | Ana Rute`,
-  icon: 'src/favicon.png',
+  icon: "src/favicon.png",
 
   transformers: {
     remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
       plugins: [
-        ['gridsome-plugin-remark-shiki', {
-          theme: 'min-light'
-        }]
+        [
+          "gridsome-plugin-remark-shiki",
+          {
+            theme: "min-light"
+          }
+        ]
       ]
     }
   },
 
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'content/posts/**/*.md',
-        typeName: 'Post',
-        route: '/:slug',
+        path: "content/posts/**/*.md",
+        typeName: "Post",
+        route: "/:slug",
         refs: {
           tags: {
-            typeName: 'Tag',
-            route: '/tag/:id',
+            typeName: "Tag",
+            route: "/tag/:id",
             create: true
           },
           author: {
-            typeName: 'Author',
-            route: '/author/:id',
+            typeName: "Author",
+            route: "/author/:id",
             create: true
           }
         }
       }
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: "@gridsome/plugin-google-analytics",
       options: {
-        id: 'UA-135446199-1'
+        id: "UA-135446199-1"
       }
     },
     {
-      use: '@gridsome/plugin-sitemap',
+      use: "@gridsome/plugin-sitemap",
       options: {
-        cacheTime: 600000, // default
+        cacheTime: 600000 // default
       }
     },
     {
-      use: 'gridsome-plugin-rss',
+      use: "gridsome-plugin-rss",
       options: {
-        contentTypeName: 'Post',
+        contentTypeName: "Post",
         feedOptions: {
-          title: 'Ana Rute\'s personal blog',
-          feed_url: 'https://gridsome-starter-bleda.netlify.com/feed.xml',
-          site_url: 'https://gridsome-starter-bleda.netlify.com'
+          title: "Ana Rute's personal blog",
+          feed_url: "https://gridsome-starter-bleda.netlify.com/feed.xml",
+          site_url: "https://gridsome-starter-bleda.netlify.com"
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.description,
-          url: 'https://gridsome-starter-bleda.netlify.com/' + node.slug,
+          url: "https://gridsome-starter-bleda.netlify.com/" + node.slug,
           author: node.author,
           date: node.date
         }),
         output: {
-          dir: './static',
-          name: 'feed.xml'
+          dir: "./static",
+          name: "feed.xml"
         }
       }
-    },
+    }
   ],
 
   chainWebpack: config => {
     config.module
-      .rule('css')
-      .oneOf('normal')
-      .use('postcss-loader')
+      .rule("css")
+      .oneOf("normal")
+      .use("postcss-loader")
       .tap(options => {
-        options.plugins.unshift(...[
-          require('postcss-import'),
-          require('postcss-nested'),
-          require('tailwindcss'),
-        ])
+        options.plugins.unshift(
+          ...[
+            require("postcss-import"),
+            require("postcss-nested"),
+            require("tailwindcss")
+          ]
+        );
 
-        if (process.env.NODE_ENV === 'production') {
-          options.plugins.push(...[
-            require('@fullhuman/postcss-purgecss')({
-              content: [
-                'src/assets/**/*.css',
-                'src/**/*.vue',
-                'src/**/*.js'
-              ],
-              extractors: [
-                {
-                  extractor: TailwindExtractor,
-                  extensions: ['css', 'vue', 'js']
-                }
-              ],
-              whitelistPatterns: [/shiki/]
-            }),
-          ])
+        if (process.env.NODE_ENV === "production") {
+          options.plugins.push(
+            ...[
+              require("@fullhuman/postcss-purgecss")({
+                content: ["src/assets/**/*.css", "src/**/*.vue", "src/**/*.js"],
+                extractors: [
+                  {
+                    extractor: TailwindExtractor,
+                    extensions: ["css", "vue", "js"]
+                  }
+                ],
+                whitelistPatterns: [/shiki/]
+              })
+            ]
+          );
         }
 
-        return options
-      })
-  },
-}
-
-
-
-
-
+        return options;
+      });
+  }
+};
