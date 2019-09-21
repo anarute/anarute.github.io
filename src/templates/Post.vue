@@ -34,7 +34,7 @@
             </div>
           </div>
         </footer>
-        <vue-disqus shortname="anarute" :identifier="$page.post.title"></vue-disqus>
+        <vue-disqus shortname="anarute" :url="postUrl"></vue-disqus>
       </article>
       <site-footer class="pb-8 sm:pb-10" />
     </main>
