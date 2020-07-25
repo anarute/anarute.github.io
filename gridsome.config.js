@@ -5,8 +5,8 @@ class TailwindExtractor {
 }
 
 module.exports = {
-  siteName: "Ana Rute's personal blog",
-  siteDescription: "Randoms thoughts about life and code.",
+  siteName: "root#ana",
+  siteDescription: "Randoms thoughts about life and code. @anarute",
   siteUrl: "https://anarute.com",
   titleTemplate: `%s | Ana Rute`,
   icon: "src/favicon.png",
@@ -64,14 +64,14 @@ module.exports = {
       options: {
         contentTypeName: "Post",
         feedOptions: {
-          title: "Ana Rute's personal blog",
-          feed_url: "https://gridsome-starter-bleda.netlify.com/feed.xml",
-          site_url: "https://gridsome-starter-bleda.netlify.com"
+          title: "root@ana#",
+          feed_url: "https://anarute.com/feed.xml",
+          site_url: "https://anarute.com"
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.description,
-          url: "https://gridsome-starter-bleda.netlify.com/" + node.slug,
+          url: "https://anarute.com/" + node.slug,
           author: node.author,
           date: node.date
         }),

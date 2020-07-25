@@ -7,7 +7,7 @@
           <h1 class="text-3xl sm:text-5xl font-sans font-bold leading-tight mb-2 text-white">{{ post.title }}</h1>
           <p class="text-white">
             <span v-if="post.author">
-              <g-link :to="`${post.author.path}/`" class="text-white capitalize border-b border-transparent hover:border-white transition-border-color">{{ titleCase(post.author.title) }}</g-link> &bull;
+              <g-link :to="`${post.author.path}/`" class="text-white border-b border-transparent hover:border-white transition-border-color">{{ post.author.title }}</g-link> &bull;
             </span>
             <time :datetime="post.datetime" class="capitalize">{{ formattedPublishDate }}</time>
           </p>
@@ -25,7 +25,7 @@
         <h1 class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-black">{{ post.title }}</h1>
         <p class="text-gray-700">
           <span v-if="post.author">
-            <g-link :to="`${post.author.path}/`" class="text-gray-700 capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.author.title) }}</g-link> &bull;
+            <g-link :to="`${post.author.path}/`" class="text-gray-700 border-b border-transparent hover:border-gray-400 transition-border-color">{{ post.author.title }}</g-link> &bull;
           </span>
           <time :datetime="post.datetime" class="capitalize">{{ formattedPublishDate }}</time>
         </p>

@@ -8,8 +8,8 @@
             <g-link :to="`${post.path}/`" class="text-black font-bold">{{ post.title }}</g-link>
           </h2>
           <p class="text-gray-700 leading-normal text-sm sm:text-base">
-            <span v-if="post.author">by <g-link :to="`${post.author.path}/`" class="text-gray-700 capitalize border-b border-transparent hover:border-gray-400 transition-border-color" v-if="post.author">{{ titleCase(post.author.title) }}</g-link></span>
-            <span v-if="post.tags && post.tags.length > 0"> in <g-link :to="`${post.tags[0].path}/`" class="text-gray-700 capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.tags[0].title) }}</g-link></span>
+            <span v-if="post.author">by <g-link :to="`${post.author.path}/`" class="text-gray-700 border-b border-transparent hover:border-gray-400 transition-border-color" v-if="post.author">{{ post.author.title }}</g-link></span>
+            <span v-if="post.tags && post.tags.length > 0"> in <g-link :to="`${post.tags[0].path}/`" class="text-gray-700 border-b border-transparent hover:border-gray-400 transition-border-color">{{ post.tags[0].title }}</g-link></span>
           </p>
         </header>
         <p class="leading-normal text-gray-700 text-lg px-2 sm:px-4 md:px-10" v-html="excerpt(post, 280, ' ...')"></p>

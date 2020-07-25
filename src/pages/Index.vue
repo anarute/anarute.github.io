@@ -6,7 +6,7 @@
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
             <g-link to="/" class="text-black">Olar o/</g-link>
           </h1>
-          <p class="text-gray-700 text-lg sm:text-3xl">Ana Root's random thoughts about life and code.</p>
+          <p class="text-gray-700 text-lg sm:text-3xl">Random thoughts about life and code.</p>
           <p>Sometimes in pt-br.</p>
         </div>
       </header>

@@ -4,7 +4,7 @@
       <header>
         <div class="max-w-xl md:max-w-3xl xl:max-w-4xl flex flex-col-reverse mx-auto text-center px-6 pt-24 pb-10 md:py-32 border-b border-gray-300">
           <p class="text-gray-700 leading-normal">{{ $page.tag.belongsTo.totalCount }} posts in total</p>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-2 capitalize">{{ titleCase($page.tag.title) }}</h1>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-2">{{ $page.tag.title }}</h1>
           <svg class="w-5 sm:w-6 fill-current text-gray-500 mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img" aria-labelledby="tagIcon"><title id="tagIcon">Posts tagged</title><path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         </div>
         <nav class="absolute top-0 left-0 z-20 mt-6 ml-6">
@@ -35,23 +35,23 @@ export default {
   },
   metaInfo () {
     return {
-      title: `Posts tagged "${this.titleCase(this.$page.tag.title)}"`,
+      title: `Posts tagged "${this.$page.tag.title}"`,
       meta: [
         {
           key: 'description',
           name: 'description',
-          content: `Browse posts tagged "${this.titleCase(this.$page.tag.title)}"`
+          content: `Browse posts tagged "${this.$page.tag.title}"`
         },
 
         { property: "og:type", content: 'website' },
-        { property: "og:title", content: `Posts tagged "${this.titleCase(this.$page.tag.title)}"` },
-        { property: "og:description", content: `Browse posts tagged "${this.titleCase(this.$page.tag.title)}"` },
+        { property: "og:title", content: `Posts tagged "${this.$page.tag.title}"` },
+        { property: "og:description", content: `Browse posts tagged "${this.$page.tag.title}"` },
         { property: "og:url", content: `${this.config.siteUrl}/${this.$page.tag.path}/` },
         { property: "og:image", content: this.ogImageUrl },
 
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: `Posts tagged "${this.titleCase(this.$page.tag.title)}"` },
-        { name: "twitter:description", content: `Browse posts tagged "${this.titleCase(this.$page.tag.title)}"` },
+        { name: "twitter:title", content: `Posts tagged "${this.$page.tag.title}"` },
+        { name: "twitter:description", content: `Browse posts tagged "${this.$page.tag.title}"` },
         { name: "twitter:site", content: "@ana_rute" },
         { name: "twitter:creator", content: "@ana_rute" },
         { name: "twitter:image", content: this.ogImageUrl },
