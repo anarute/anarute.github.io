@@ -1,11 +1,10 @@
-/*! purgecss start ignore */
-@import 'tailwindcss/base';
-/*! purgecss end ignore */
+:root {
+    --main-bg-color: rgb(44, 41, 41);
+    --main-color: #fff;
+    --container-size: 1000px;
+}
 
-@import 'components/resets';
-
-@import 'tailwindcss/components';
-
-@import 'components/markdown';
-
-@import 'tailwindcss/utilities';
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}

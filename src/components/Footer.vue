@@ -1,22 +1,28 @@
 <template>
-  <footer class="text-gray-700 text-sm leading-normal flex flex-wrap justify-between mx-auto max-w-3xl px-6 sm:px-12">
-    <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
-      <p>Based on <a href="https://github.com/cossssmin/gridsome-starter-bleda" class="border-b border-transparent hover:border-gray-400 transition-border-color">Bleda</a> by <a href="https://twitter.com/cossssmin" class="border-b border-transparent hover:border-gray-400 transition-border-color">@cossssmin</a></p>
+  <footer class="">
+    <div class="">
+      <p>
+        Based on
+        <a href="https://github.com/cossssmin/gridsome-starter-bleda" class=""
+          >Bleda</a
+        >
+        by <a href="https://twitter.com/cossssmin" class="">@cossssmin</a>
+      </p>
     </div>
-    <div class="w-full sm:w-1/2">
+    <div class="">
       <nav>
-        <ul class="flex sm:justify-end -mx-2">
-          <li class="px-2">
-            <g-link to="/" class="border-b border-transparent hover:border-gray-400 transition-border-color">Home</g-link>
+        <ul class="">
+          <li class="">
+            <g-link to="/" class="">Home</g-link>
           </li>
-          <li class="px-2">
-            <g-link to="/about/" class="border-b border-transparent hover:border-gray-400 transition-border-color">About</g-link>
+          <li class="">
+            <g-link to="/about/" class="">About</g-link>
           </li>
-          <li class="px-2">
-            <a href="/sitemap.xml" class="border-b border-transparent hover:border-gray-400 transition-border-color">Sitemap</a>
+          <li class="">
+            <a href="/sitemap.xml" class="">Sitemap</a>
           </li>
-          <li class="px-2">
-            <a href="/feed.xml" class="border-b border-transparent hover:border-gray-400 transition-border-color">RSS Feed</a>
+          <li class="">
+            <a href="/feed.xml" class="">RSS Feed</a>
           </li>
         </ul>
       </nav>
@@ -25,8 +31,7 @@
 </template>
 
 <script>
-
 export default {
-  name: 'Footer',
-}
+  name: "Footer",
+};
 </script>
