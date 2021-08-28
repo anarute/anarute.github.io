@@ -1,13 +1,18 @@
 <template>
-  <Layout class="">
+  <Layout class="layout">
     <main>
+      <main-menu />
       <header>
-        <div class="">
+        <div class="home-header">
           <h1 class="">
-            <g-link to="/" class="">Olar o/</g-link>
+            <g-link to="/about" class="">Hi, I'm Ana</g-link>
           </h1>
-          <p class="">Random thoughts about life and code.</p>
-          <p>Sometimes in pt-br.</p>
+          <p class="lead">
+            This is my personal blog where you will find random thoughts about
+            life and code. <br />
+            I currently define myself professionally as a legacy code restorer.
+          </p>
+          <p>Sometimes I write in pt-br.</p>
         </div>
       </header>
       <section>
@@ -31,9 +36,11 @@ import config from "~/.temp/config.js";
 import SiteFooter from "@/components/Footer";
 import PostItem from "@/components/PostItem";
 import Pagination from "@/components/Pagination";
+import MainMenu from "@/components/MainMenu.vue";
 
 export default {
   components: {
+    MainMenu,
     PostItem,
     Pagination,
     SiteFooter,
@@ -70,7 +77,7 @@ export default {
 
 <page-query>
   query Home ($page: Int) {
-    posts: allPost (page: $page, perPage: 6) @paginate {
+    posts: allPost (page: $page, perPage: 20) @paginate {
       totalCount
       pageInfo {
         totalPages

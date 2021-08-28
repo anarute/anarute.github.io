@@ -1,10 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+/* @import 'components/markdown'; */
+@import 'components/menu.css';
+
 :root {
-    --main-bg-color: rgb(44, 41, 41);
+    --main-bg-color: rgb(38, 31, 43);
     --main-color: #fff;
+    --accent-color: #fd5e2d;
     --container-size: 1000px;
+    --grey: #444;
 }
 
 body {
     background-color: var(--main-bg-color);
     color: var(--main-color);
+    font-family: 'Fira Code', monospace;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.layout {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.post-title {
+    margin: 10px 0;
+}
+
+.home-header {
+    border-bottom: 1px solid var(--grey);
+    margin-bottom: 30px;
 }

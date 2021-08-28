@@ -1,15 +1,6 @@
 <template>
   <footer class="">
     <div class="">
-      <p>
-        Based on
-        <a href="https://github.com/cossssmin/gridsome-starter-bleda" class=""
-          >Bleda</a
-        >
-        by <a href="https://twitter.com/cossssmin" class="">@cossssmin</a>
-      </p>
-    </div>
-    <div class="">
       <nav>
         <ul class="">
           <li class="">

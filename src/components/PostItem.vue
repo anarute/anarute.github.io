@@ -2,32 +2,15 @@
   <article>
     <div class="">
       <div class="">
-        <header class="">
-          <time :datetime="post.datetime" class="">{{
-            formatPublishDate(post.datetime)
-          }}</time>
-          <h2 class="">
+        <header>
+          <p class="post-title">
+            <time :datetime="post.datetime" class="">{{
+              formatPublishDate(post.datetime)
+            }}</time>
+            -
             <g-link :to="`${post.path}/`" class="">{{ post.title }}</g-link>
-          </h2>
-          <p class="">
-            <span v-if="post.author"
-              >by
-              <g-link
-                :to="`${post.author.path}/`"
-                class=""
-                v-if="post.author"
-                >{{ post.author.title }}</g-link
-              ></span
-            >
-            <span v-if="post.tags && post.tags.length > 0">
-              in
-              <g-link :to="`${post.tags[0].path}/`" class="">{{
-                post.tags[0].title
-              }}</g-link></span
-            >
           </p>
         </header>
-        <p class="" v-html="excerpt(post, 280, ' ...')"></p>
       </div>
     </div>
   </article>
@@ -45,7 +28,7 @@ export default {
   },
   methods: {
     formatPublishDate(date) {
-      return moment(date).format("DD MMMM, YYYY");
+      return moment(date).format("YYYY-MM-DD");
     },
     excerpt(post, length, clamp) {
       if (post.excerpt) {
