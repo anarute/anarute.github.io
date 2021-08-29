@@ -1,21 +1,34 @@
 <template>
   <Layout>
     <main>
-      <header class="">
-        <h1 class="">About</h1>
+      <header>
+        <h1>About</h1>
       </header>
-      <nav class="">
-        <g-link to="/" class="">&larr; Home</g-link>
-      </nav>
-      <article class="">
-        <div class="">
-          <p>
-            Software engineer with entrepreneurial background, based in São
-            Paulo and currently working at Collabora. Fully engaged on creating
-            products to impact society positively or just for fun. Fights for
-            more diversity in tech and equal opportunities for everyone.
-          </p>
-        </div>
+      <article>
+        <p>
+          I’m a web developer with an entrepreneurial background, passionate
+          about solving problems and using technology to positively impact
+          society. I love spending my free time with friends and family,
+          watching TV series, and playing video games. Currently learning how to
+          play the piano.
+        </p>
+        <p>
+          At the moment, I work at
+          <a href="https://www.igalia.com/">Igalia</a> as a software developer
+          at the internal tools. I'm a generalist and normally present myself as
+          a full stack developer but recently I've been turning into a legacy
+          code specialist (or may I say restorer?). Yes, believe it or not I'm
+          actually enjoying it!
+        </p>
+        <p>
+          You can find me on
+          <a href="https://www.twitter.com/ana_rute">Twitter</a> where I'm most
+          active or if you want to dig more about my professional background you
+          can check my
+          <a href="https://www.linkedin.com/in/anarute">Linkedin</a>
+          profile. Some part of my work is open and you can check it on my
+          <a href="https://github.com/anarute">Github</a> profile.
+        </p>
       </article>
     </main>
   </Layout>
