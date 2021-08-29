@@ -13,13 +13,7 @@
             <g-link to="/setup/" class="">setup</g-link>
           </li>
           <li>
-            <a href="https://twitter.com/ana_rute">twitter</a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/anarute">linkedin</a>
-          </li>
-          <li>
-            <a href="https://github.com/anarute">github</a>
+            <a href="/talks/">talks</a>
           </li>
           <li>
             <a href="/feed.xml">RSS Feed</a>

@@ -5,7 +5,7 @@
 
 :root {
     --main-bg-color: rgb(38, 31, 43);
-    --main-color: #fff;
+    --main-color: #ddd;
     --accent-color: #fd5e2d;
     --container-size: 1000px;
     --grey: #444;
@@ -15,6 +15,7 @@ body {
     background-color: var(--main-bg-color);
     color: var(--main-color);
     font-family: 'Fira Code', monospace;
+    line-height: 2em;
 }
 
 a {
@@ -44,6 +45,8 @@ blockquote {
 .home-header {
     border-bottom: 1px solid var(--grey);
     margin-bottom: 30px;
+    margin-top: 50px;
+    padding-bottom: 30px;
 }
 
 .tag {
