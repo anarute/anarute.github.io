@@ -17,19 +17,14 @@
           </p>
         </div>
       </article>
-      <site-footer class="" />
     </main>
   </Layout>
 </template>
 
 <script>
 import config from "~/.temp/config.js";
-import SiteFooter from "@/components/Footer";
 
 export default {
-  components: {
-    SiteFooter,
-  },
   metaInfo() {
     return {
       title: "About",

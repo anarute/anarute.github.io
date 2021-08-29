@@ -3,13 +3,13 @@
     <main>
       <post-header :post="$page.post" />
 
-      <article class="" :class="">
-        <alert v-if="postIsOlderThanOneYear" class="">
+      <article>
+        <alert v-if="postIsOlderThanOneYear" class="warning">
           This post is over a year old, some of this information may be out of
           date.
         </alert>
 
-        <div :class="" class="" v-html="$page.post.content" />
+        <div v-html="$page.post.content" />
 
         <footer v-if="$page.post.author || $page.post.tags" class="">
           <div>
@@ -17,50 +17,14 @@
               v-for="tag in $page.post.tags"
               :key="tag.id"
               :to="`${tag.path}/`"
-              class=""
+              class="tag"
             >
-              <svg
-                class=""
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                role="img"
-              >
-                <path
-                  d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                />
-              </svg>
               {{ tag.title }}
             </g-link>
-          </div>
-          <div v-if="$page.post.author" class="">
-            <figure class="">
-              <g-link :to="`${$page.post.author.path}/`">
-                <img
-                  :src="avatar"
-                  :alt="$page.post.author.title"
-                  @error="imageLoadError"
-                  width="100"
-                  class=""
-                />
-              </g-link>
-            </figure>
-            <div class="">
-              <h4 class="">
-                <g-link :to="`${$page.post.author.path}/`" class="">{{
-                  $page.post.author.title
-                }}</g-link>
-              </h4>
-              <p class="">
-                <g-link :to="`${$page.post.author.path}/`" class=""
-                  >See all posts by {{ $page.post.author.title }} &rarr;</g-link
-                >
-              </p>
-            </div>
           </div>
         </footer>
         <vue-disqus shortname="anarute" :url="postUrl"></vue-disqus>
       </article>
-      <site-footer class="" />
     </main>
   </Layout>
 </template>
@@ -70,14 +34,12 @@ import moment from "moment";
 import config from "~/.temp/config.js";
 import Alert from "@/components/Alert";
 import slugify from "@sindresorhus/slugify";
-import SiteFooter from "@/components/Footer";
 import PostHeader from "~/components/PostHeader";
 
 export default {
   components: {
     Alert,
     PostHeader,
-    SiteFooter,
   },
   metaInfo() {
     return {
@@ -180,7 +142,6 @@ query Post ($path: String) {
     datetime: date (format: "YYYY-MM-DD HH:mm:ss")
     content
     description
-    timeToRead
     cover
     fullscreen
     author {

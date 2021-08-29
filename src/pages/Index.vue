@@ -1,16 +1,12 @@
 <template>
-  <Layout class="layout">
+  <Layout>
     <main>
-      <main-menu />
       <header>
         <div class="home-header">
-          <h1 class="">
-            <g-link to="/about" class="">Hi, I'm Ana</g-link>
-          </h1>
+          <h1 class="">Hi, I'm Ana</h1>
           <p class="lead">
             This is my personal blog where you will find random thoughts about
-            life and code. <br />
-            I currently define myself professionally as a legacy code restorer.
+            life and code.
           </p>
           <p>Sometimes I write in pt-br.</p>
         </div>
@@ -26,24 +22,19 @@
         :info="$page.posts.pageInfo"
         v-if="$page.posts.pageInfo.totalPages > 1"
       />
-      <site-footer class="" />
     </main>
   </Layout>
 </template>
 
 <script>
 import config from "~/.temp/config.js";
-import SiteFooter from "@/components/Footer";
 import PostItem from "@/components/PostItem";
 import Pagination from "@/components/Pagination";
-import MainMenu from "@/components/MainMenu.vue";
 
 export default {
   components: {
-    MainMenu,
     PostItem,
     Pagination,
-    SiteFooter,
   },
   metaInfo() {
     return {

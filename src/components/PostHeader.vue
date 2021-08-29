@@ -1,9 +1,8 @@
 <template>
   <header>
-    <div v-if="post.cover" class="" :class="">
-      <div class="" :class="">
-        <div class="">
-          <p class="">{{ post.timeToRead }} min read</p>
+    <div v-if="post.cover">
+      <div>
+        <div>
           <h1 class="">{{ post.title }}</h1>
           <p class="">
             <span v-if="post.author">
@@ -26,7 +25,6 @@
     </div>
     <div v-else class="">
       <div class="">
-        <p class="">{{ post.timeToRead }} min read</p>
         <h1 class="">{{ post.title }}</h1>
         <p class="">
           <span v-if="post.author">
@@ -41,9 +39,6 @@
         </p>
       </div>
     </div>
-    <nav class="">
-      <g-link to="/" :class="" class="">&larr; Home</g-link>
-    </nav>
   </header>
 </template>
 

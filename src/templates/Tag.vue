@@ -2,25 +2,10 @@
   <Layout>
     <main>
       <header>
-        <div class="">
-          <p class="">{{ $page.tag.belongsTo.totalCount }} posts in total</p>
-          <h1 class="">{{ $page.tag.title }}</h1>
-          <svg
-            class=""
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            role="img"
-            aria-labelledby="tagIcon"
-          >
-            <title id="tagIcon">Posts tagged</title>
-            <path
-              d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-            />
-          </svg>
+        <div>
+          <h1>> {{ $page.tag.title }}</h1>
+          <p>{{ $page.tag.belongsTo.totalCount }} posts in total</p>
         </div>
-        <nav class="">
-          <g-link to="/" class="">&larr; Home</g-link>
-        </nav>
       </header>
       <section>
         <post-item
@@ -34,23 +19,19 @@
         :info="$page.tag.belongsTo.pageInfo"
         v-if="$page.tag.belongsTo.pageInfo.totalPages > 1"
       />
-      <site-footer class="" />
     </main>
   </Layout>
 </template>
 
 <script>
-import moment from "moment";
 import config from "~/.temp/config.js";
 import PostItem from "@/components/PostItem";
-import SiteFooter from "@/components/Footer";
 import Pagination from "@/components/Pagination";
 
 export default {
   components: {
     PostItem,
     Pagination,
-    SiteFooter,
   },
   metaInfo() {
     return {

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
-/* @import 'components/markdown'; */
+@import 'components/markdown.css';
 @import 'components/menu.css';
 
 :root {
@@ -23,6 +23,14 @@ a {
     border-bottom: 1px solid var(--accent-color);
 }
 
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    font-style: italic;
+}
+
 .layout {
     max-width: 900px;
     margin: 0 auto;
@@ -36,4 +44,16 @@ a {
 .home-header {
     border-bottom: 1px solid var(--grey);
     margin-bottom: 30px;
+}
+
+.tag {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.warning {
+    border: 1px solid #666;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
 }
