@@ -10,7 +10,7 @@
             <g-link to="/about/" class="">about</g-link>
           </li>
           <li class="">
-            <g-link to="/setup/" class="">setup</g-link>
+            <g-link to="/uses/" class="">setup</g-link>
           </li>
           <li>
             <a href="/talks/">talks</a>
