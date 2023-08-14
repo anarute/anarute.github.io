@@ -9,10 +9,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v1
-    - name: Install dependencies and deploy to master
+    - name: Install dependencies and deploy to main
       run: |
         echo yarn install
         echo npm run deploy

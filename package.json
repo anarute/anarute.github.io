@@ -7,7 +7,7 @@
     "explore": "gridsome explore",
     "newpost": "node scripts/newPost.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d dist"
+    "deploy": "gh-pages -b main -d dist"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
