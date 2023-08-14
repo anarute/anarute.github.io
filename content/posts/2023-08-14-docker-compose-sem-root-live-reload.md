@@ -120,7 +120,7 @@ foi o que me salvou:
 > "If you want to add to add more volumes to the container, make sure it has the
 > appropriate SELinux label if you’re using a distribution with it enabled."
 
-`chcon -t container_file_t -R <volume_name>`
+`chcon -t container_file_t -R <volume_folder>`
 
 No caso do meu exemplo, `chcon -t container_file_t -R app` foi o que resolveu.
 
