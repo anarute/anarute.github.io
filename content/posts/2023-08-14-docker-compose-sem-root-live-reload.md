@@ -25,7 +25,8 @@ reconstruir-los.
 Como um teste simples inicial, criei uma aplicação com FastAPI, com um único
 endpoint o mais simples possível:
 
-```
+
+```python
 # src/main.py
 
 from typing import Optional
@@ -41,7 +42,7 @@ def read_root():
 O Dockerfile também super simples, seguindo os passos da [documentação do
 FastAPI](https://fastapi.tiangolo.com/deployment/docker/):
 
-```
+```python
 # Dockerfile
 
 FROM python:3.9
@@ -57,16 +58,17 @@ COPY ./app /code/app
 EXPOSE 8000
 
 # A opção --reload é que faz o servidor recarregar quando há mudanças nos arquivos
-CMD ["uvicorn", "app.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
 
+CMD ["uvicorn", "app.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
 E no docker-compose, o segredo tá na configuração dos volumes:
 
-```
+```python
 # docker-compose.yml
 
 version: '3.7'
+
 services:
   server:
     container_name: server
@@ -106,7 +108,7 @@ dois problemas: https://brandonrozek.com/blog/rootless-docker-compose-podman/
 A solução veio em duas etapas, passar a rodar o socket do podman como meu
 usuário e não mais com root:
 
-```
+```sh
 systemctl --user enable podman.socket
 systemctl --user start podman.socket
 export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
